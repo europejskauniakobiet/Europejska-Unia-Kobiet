@@ -1,209 +1,96 @@
-/* Ogólne ustawienia */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f6fa;
+    color: #2c3e50;
     line-height: 1.6;
-    color: #333;
-    background-color: #fafafa;
 }
 
-/* Nagłówek */
 header {
     background-color: #003399;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
 }
+
 header h1 {
     margin: 0;
     font-size: 1.8em;
 }
+
 nav {
     margin-top: 10px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-}
-nav a:hover {
-    text-decoration: underline;
+    transition: 0.3s;
 }
 
-/* Sekcja główna */
+nav a:hover {
+    color: #ffcc00;
+}
+
 .hero {
-    background: linear-gradient(to right, #003399, #3366cc);
+    background: linear-gradient(135deg, #003399, #3366cc);
     color: white;
     text-align: center;
     padding: 80px 20px;
 }
+
 .hero h2 {
-    font-size: 2em;
+    font-size: 2.2em;
+    margin-bottom: 15px;
 }
+
 .hero p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
+
 .button {
     background-color: #ffcc00;
     color: #003399;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-}
-.button:hover {
-    background-color: #ffdd33;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-/* Sekcje */
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
+.button:hover {
+    background-color: #ffd633;
 }
+
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 section h2 {
     color: #003399;
-    border-bottom: 2px solid #ffcc00;
-    display: inline-block;
+    font-size: 2em;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Aktualności */
-article {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-left: 4px solid #003399;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ul {
+    list-style: inside disc;
+    padding-left: 0;
 }
 
-/* Stopka */
 footer {
     background-color: #003399;
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
+    padding: 20px;
 }
-#onas {
-    background-color: #f9f9f9; /* jasne tło, żeby tekst był dobrze widoczny */
-    color: #000;               /* czarny tekst */
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin: 30px 0;
-}
-
-#onas h2, #onas h3 {
-    color: #000; /* nagłówki też czarne */
-}
-
-#onas p, #onas .cele li {
-    color: #000; /* tekst paragrafów i punktów listy czarny */
-}
-
-/* Styl dla sekcji "O nas" */
-#onas {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin: 30px 0;
-}
-
-#onas h2 {
-    color: #2c3e50;
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#onas h3 {
-    color: #34495e;
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-#onas p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Lista celów */
-#onas .cele {
-    counter-reset: cele-counter;
-    list-style: none;
-    padding-left: 0;
-}
-
-#onas .cele li {
-    counter-increment: cele-counter;
-    background-color: #ffffff;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border-left: 5px solid #3498db;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-    font-size: 1.05em;
-}
-
-#onas .cele li::before {
-    content: counter(cele-counter);
-    position: absolute;
-    left: -35px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3498db;
-    color: #fff;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-/* Styl dla sekcji Kontakt */
-#kontakt {
-    background-color:  #34495e;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin: 30px 0;
-    text-align: center;
-}
-
-#kontakt h2 {
-    color: #2c3e50;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Kontener dla zdjęcia i danych */
-#kontakt .kontakt-info {
-    display: flex;
-    flex-direction: column; /* domyślnie w kolumnie, dla responsywności */
-    align-items: center;
-    gap: 20px;
-}
-
-/* Zdjęcie w kontakcie */
-#kontakt .kontakt-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Dane kontaktowe */
-#kontakt .kontakt-dane p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-
-
