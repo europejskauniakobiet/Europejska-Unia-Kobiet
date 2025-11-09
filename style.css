@@ -1,219 +1,90 @@
-/* Ogólne ustawienia */
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
+/* ===============================
+   Globalne ustawienia
+   =============================== */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fafafa;
+    box-sizing: border-box;
 }
-
-/* Nagłówek */
-header {
-    background-color: #003399;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-nav {
-    margin-top: 10px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Sekcja główna */
-.hero {
-    background: linear-gradient(to right, #003399, #3366cc);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-.hero h2 {
-    font-size: 2em;
-}
-.hero p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-.button {
-    background-color: #ffcc00;
-    color: #003399;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-.button:hover {
-    background-color: #ffdd33;
-}
-
-/* Sekcje */
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-section h2 {
-    color: #003399;
-    border-bottom: 2px solid #ffcc00;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-/* Aktualności */
-article {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-left: 4px solid #003399;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Stopka */
-footer {
-    background-color: #003399;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-}
-/* Styl dla sekcji "O nas" */
-#onas {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin: 30px 0;
-}
-
-#onas h2 {
-    color: #2c3e50;
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#onas h3 {
-    color: #34495e;
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-#onas p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* Lista celów */
-#onas .cele {
-    counter-reset: cele-counter;
-    list-style: none;
-    padding-left: 0;
-}
-
-#onas .cele li {
-    counter-increment: cele-counter;
-    background-color: #ffffff;
-    padding: 12px 20px;
-    margin-bottom: 10px;
-    border-left: 5px solid #3498db;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-    font-size: 1.05em;
-}
-
-#onas .cele li::before {
-    content: counter(cele-counter);
-    position: absolute;
-    left: -35px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3498db;
-    color: #fff;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f6fa;
-    color: #2c3e50;
     line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f5f6fa;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===============================
+   Nagłówek i nawigacja
+   =============================== */
 header {
-    background-color: #003399;
-    color: white;
-    text-align: center;
+    background: linear-gradient(135deg, #003399, #3366cc);
+    color: #fff;
     padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
-    margin: 0;
     font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* ===============================
+   Hero section
+   =============================== */
 .hero {
     background: linear-gradient(135deg, #003399, #3366cc);
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .hero h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
 }
 
 .button {
     background-color: #ffcc00;
     color: #003399;
-    padding: 12px 25px;
-    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 12px;
     font-weight: bold;
-    border-radius: 8px;
     transition: 0.3s;
 }
 
@@ -221,39 +92,73 @@ nav a:hover {
     background-color: #ffd633;
 }
 
+/* ===============================
+   Sekcje główne
+   =============================== */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     max-width: 1000px;
-    margin: auto;
-    background-color: white;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 section h2 {
     color: #003399;
     font-size: 2em;
     text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ===============================
+   Teksty i listy
+   =============================== */
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
     margin-bottom: 20px;
 }
 
 ul {
-    list-style: inside disc;
+    list-style: none;
     padding-left: 0;
 }
 
-footer {
-    background-color: #003399;
-    color: white;
-    text-align: center;
-    padding: 20px;
+ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.05em;
 }
-/* Galeria */
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #003399;
+    font-size: 1.5em;
+}
+
+/* ===============================
+   Galeria
+   =============================== */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-top: 30px;
 }
 
@@ -262,8 +167,8 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-item img {
@@ -273,38 +178,85 @@ footer {
 }
 
 .gallery-item p {
-    padding: 10px;
+    padding: 12px;
     font-weight: bold;
+    font-size: 1em;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Oddziały */
+/* ===============================
+   Oddziały
+   =============================== */
 .branches {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-top: 30px;
 }
 
 .branch-card {
     background-color: #f5f6fa;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .branch-card h3 {
     color: #003399;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
 }
 
 .branch-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
+/* ===============================
+   Kontakt
+   =============================== */
+#kontakt {
+    text-align: center;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+}
 
+#kontakt p {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+/* ===============================
+   Stopka
+   =============================== */
+footer {
+    background-color: #003399;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+    font-size: 0.95em;
+}
+
+/* ===============================
+   Responsywność
+   =============================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
