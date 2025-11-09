@@ -1,96 +1,57 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Galeria */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-item {
     background-color: #f5f6fa;
-    color: #2c3e50;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #003399;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #ffcc00;
-}
-
-.hero {
-    background: linear-gradient(135deg, #003399, #3366cc);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.button {
-    background-color: #ffcc00;
-    color: #003399;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background-color: #ffd633;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-    background-color: white;
     border-radius: 12px;
-    margin-bottom: 30px;
+    overflow: hidden;
+    text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-section h2 {
-    color: #003399;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-ul {
-    list-style: inside disc;
-    padding-left: 0;
+.gallery-item p {
+    padding: 10px;
+    font-weight: bold;
 }
 
-footer {
-    background-color: #003399;
-    color: white;
-    text-align: center;
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Oddziały */
+.branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.branch-card {
+    background-color: #f5f6fa;
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.branch-card h3 {
+    color: #003399;
+    margin-bottom: 10px;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
 }
