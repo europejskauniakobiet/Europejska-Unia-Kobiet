@@ -260,3 +260,93 @@ footer {
         font-size: 1em;
     }
 }
+
+/* ===============================
+   Sekcja O nas
+   =============================== */
+#onas {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+#onas h2,
+#onas h3 {
+    text-align: center;
+    color: #003399;
+    margin-bottom: 20px;
+}
+
+#onas p {
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+#onas .cele {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: cele-counter;
+}
+
+#onas .cele li {
+    counter-increment: cele-counter;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+#onas .cele li::before {
+    content: counter(cele-counter);
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3498db;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#onas .cele li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+#onas .zarzad {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+#onas .zarzad li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+#onas .zarzad li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #003399;
+    font-size: 1.2em;
+    line-height: 1;
+}
