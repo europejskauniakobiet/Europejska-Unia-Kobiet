@@ -154,7 +154,7 @@ footer {
 
 /* Styl dla sekcji Kontakt */
 #kontakt {
-    background-color: #f2f2f2;
+    background-color:  #34495e;
     padding: 40px 20px;
     border-radius: 12px;
     margin: 30px 0;
@@ -188,4 +188,5 @@ footer {
     font-size: 1.1em;
     margin: 5px 0;
 }
+
 
