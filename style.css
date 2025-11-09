@@ -88,6 +88,22 @@ footer {
     padding: 15px;
     font-size: 0.9em;
 }
+#onas {
+    background-color: #f9f9f9; /* jasne tło, żeby tekst był dobrze widoczny */
+    color: #000;               /* czarny tekst */
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+#onas h2, #onas h3 {
+    color: #000; /* nagłówki też czarne */
+}
+
+#onas p, #onas .cele li {
+    color: #000; /* tekst paragrafów i punktów listy czarny */
+}
+
 /* Styl dla sekcji "O nas" */
 #onas {
     background-color: #f9f9f9;
@@ -188,5 +204,6 @@ footer {
     font-size: 1.1em;
     margin: 5px 0;
 }
+
 
 
