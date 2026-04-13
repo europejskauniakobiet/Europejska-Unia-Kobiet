@@ -8,17 +8,6 @@
 }
 
 body {
-   <style>
-  header {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .logo {
-    max-width: 200px;
-    height: auto;
-  }
-</style>
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #2c3e50;
@@ -31,7 +20,7 @@ a {
 }
 
 /* ===============================
-   Nagłówek i nawigacja
+   Nagłówek i logo
    =============================== */
 header {
     background: linear-gradient(135deg, #003399, #3366cc);
@@ -41,14 +30,19 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-header h1 {
-    font-size: 1.8em;
     text-align: center;
-    margin-bottom: 10px;
 }
 
+.logo {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* ===============================
+   Nawigacja
+   =============================== */
 nav {
     display: flex;
     justify-content: center;
@@ -87,7 +81,7 @@ nav a:hover {
 .hero p {
     font-size: 1.2em;
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
 }
 
 .button {
@@ -104,7 +98,7 @@ nav a:hover {
 }
 
 /* ===============================
-   Sekcje główne
+   Sekcje
    =============================== */
 section {
     padding: 60px 20px;
@@ -129,13 +123,10 @@ section h2::after {
     width: 60px;
     height: 4px;
     background-color: #ffcc00;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 0;
     border-radius: 2px;
 }
 
-/* ===============================
-   Teksty i listy
-   =============================== */
 section p {
     font-size: 1.1em;
     line-height: 1.8;
@@ -143,16 +134,17 @@ section p {
     margin-bottom: 20px;
 }
 
+/* ===============================
+   Listy
+   =============================== */
 ul {
     list-style: none;
-    padding-left: 0;
 }
 
 ul li {
     position: relative;
     padding-left: 35px;
     margin-bottom: 15px;
-    font-size: 1.05em;
 }
 
 ul li::before {
@@ -179,68 +171,15 @@ ul li::before {
     overflow: hidden;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    display: block;
-}
-
-.gallery-item p {
-    padding: 12px;
-    font-weight: bold;
-    font-size: 1em;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* ===============================
-   Oddziały
-   =============================== */
-.branches {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.branch-card {
-    background-color: #f5f6fa;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.branch-card h3 {
-    color: #003399;
-    margin-bottom: 12px;
-    font-size: 1.3em;
-}
-
-.branch-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-/* ===============================
-   Kontakt
-   =============================== */
-#kontakt {
-    text-align: center;
-    background: linear-gradient(135deg, #34495e, #2c3e50);
-    color: white;
-}
-
-#kontakt p {
-    font-size: 1.1em;
-    margin-bottom: 12px;
 }
 
 /* ===============================
@@ -252,112 +191,17 @@ footer {
     text-align: center;
     padding: 25px 10px;
     margin-top: 50px;
-    font-size: 0.95em;
 }
 
 /* ===============================
    Responsywność
    =============================== */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
     .hero h2 {
         font-size: 2em;
     }
 
-    .hero p {
-        font-size: 1em;
+    nav {
+        flex-direction: column;
     }
-}
-
-/* ===============================
-   Sekcja O nas
-   =============================== */
-#onas {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    border-radius: 16px;
-    max-width: 900px;
-    margin: 50px auto;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-#onas h2,
-#onas h3 {
-    text-align: center;
-    color: #003399;
-    margin-bottom: 20px;
-}
-
-#onas p {
-    text-align: left;
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-#onas .cele {
-    list-style: none;
-    padding-left: 0;
-    counter-reset: cele-counter;
-}
-
-#onas .cele li {
-    counter-increment: cele-counter;
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 15px;
-    background-color: #ffffff;
-    border-left: 5px solid #3498db;
-    border-radius: 8px;
-    padding: 12px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-#onas .cele li::before {
-    content: counter(cele-counter);
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #3498db;
-    color: white;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-#onas .cele li:hover {
-    transform: translateX(5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-#onas .zarzad {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 30px;
-}
-
-#onas .zarzad li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    font-weight: 500;
-    color: #2c3e50;
-}
-
-#onas .zarzad li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #003399;
-    font-size: 1.2em;
-    line-height: 1;
 }
